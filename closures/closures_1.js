@@ -32,3 +32,11 @@ function createCounter() {
 const counter = createCounter();
 
 // Factory Functions
+function exponentialFunction(exp) {
+  return function (val) {
+    return val ** exp;
+  };
+}
+
+const square = exponentialFunction(2);
+const cube = exponentialFunction(3);
