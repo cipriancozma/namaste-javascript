@@ -15,4 +15,12 @@ Each function will create a new execution context with the specific phases, Memo
 
 ### 3. Hoisting in JavaScript (variables & functions)
 
-R:
+R: When the JS engine gets our script, the first thing it does is setting up memory for the data in our code. No code is executed at this point, it's simply just preparing everything for execution. <br>
+Functions are stored with a reference to the entire function.<br>
+With variables it's a bit different. With **let** and **const** variables are stored **uninitialized**. <br>
+Variables declared with **var** are stored with the default value of **undefined**. <br>
+What is presented above is happening in the **Memory allocation phase**. <br>
+In order to prevent to accidentally reference an undefined variable, like we can have with var, a **reference error** gets thrown if we try to access uninitialized variables. The zone before their actual declaration is called **temporal dead zone**. <br>
+Functions and variables are stored in memory for an execution context before we execute the code. This is called **hoisting**. <br>
+
+### 4. How functions work in JS && Variable Envinronment
