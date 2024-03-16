@@ -26,3 +26,17 @@ let triangle_1 = new Triangle(2, 3);
 console.log(triangle_1.getArea());
 
 console.log(triangle_1 instanceof Triangle);
+
+class ColorTriangle extends Triangle {
+  constructor(a, b, color) {
+    super(a, b); // calls the parent constructor
+
+    this.color = color;
+  }
+
+  getColor() {
+    return `${this.color} is the colour`;
+  }
+}
+
+const newColor = new ColorTriangle(3, 2, "red");
