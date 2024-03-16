@@ -40,3 +40,20 @@ class ColorTriangle extends Triangle {
 }
 
 const newColor = new ColorTriangle(3, 2, "red");
+
+class Cat {
+  constructor(name, breed) {
+    this.name = name;
+    this.breed = breed;
+  }
+
+  // static property is tied to the class not to the instance of the class
+  static species = "felis catus";
+  // if we are trying to instantate the class Cat, on all the instances we will have the same species
+}
+
+const blueCat = new Cat("Blue", "scotish");
+console.log(blueCat.name); // Blue
+console.log(blueCat.breed); // Scotish
+console.log(blueCat.species); // undefined
+console.log(Cat.species); // felis catus
