@@ -50,6 +50,12 @@ class Cat {
   // static property is tied to the class not to the instance of the class
   static species = "felis catus";
   // if we are trying to instantate the class Cat, on all the instances we will have the same species
+
+  // the static method is on the class NOT on the instance
+  // this is the class if we try to access it in the static method
+  static meow() {
+    return "Meow meow meow!";
+  }
 }
 
 const blueCat = new Cat("Blue", "scotish");
