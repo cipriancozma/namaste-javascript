@@ -63,3 +63,6 @@ console.log(blueCat.name); // Blue
 console.log(blueCat.breed); // Scotish
 console.log(blueCat.species); // undefined
 console.log(Cat.species); // felis catus
+
+// static methods are used in order to group related functionality together
+// static methods are used on the class, not on the instance of the class
