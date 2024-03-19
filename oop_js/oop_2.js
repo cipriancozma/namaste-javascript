@@ -1,19 +1,34 @@
 class Circle {
+  // public -> can be accessed from outside the class
+  // can be accessed via the instance
+  circleName = "CC";
+
+  #radius;
   constructor(radius) {
-    this._radius = radius;
+    // private
+    this.#radius = radius;
   }
 
   // getter
   get diameter() {
-    return this._radius * 2;
+    return this.#radius * 2;
   }
 
   // setter
-  set radius(value) {
+  //   set radius(value) {
+  //     if (value < 0) {
+  //       throw new Error("Add a positive number");
+  //     } else {
+  //       this.#radius = value;
+  //     }
+  //   }
+
+  // private setter
+  #setRadius(value) {
     if (value < 0) {
       throw new Error("Add a positive number");
     } else {
-      this._radius = value;
+      this.#radius = value;
     }
   }
 }
