@@ -44,3 +44,13 @@ const filteredArr = arr.filter((num) => num > 5);
 
 const sum = arr.reduce((acc, num) => acc + num, 0);
 // console.log(sum);
+
+// Advanced Objects
+// pas by value vs pass by reference
+
+let object1 = { value: 10 };
+let object2 = object1;
+let object3 = { value: 10 };
+
+// console.log(object1 === object2); // true
+// console.log(object1 === object3); // false
