@@ -5,6 +5,7 @@ const data = [
     author: "Author-1",
     genres: ["science fiction", "humor", "short stories", "fantasy"],
     hasMovieAdaptation: true,
+    pages: 420,
   },
   {
     id: 2,
@@ -12,6 +13,7 @@ const data = [
     author: "Author-2",
     genres: ["science fiction", "humor", "short stories"],
     hasMovieAdaptation: true,
+    pages: 388,
   },
   {
     id: 3,
@@ -19,12 +21,14 @@ const data = [
     author: "Author-3",
     genres: ["science fiction", "humor", "fantasy"],
     hasMovieAdaptation: true,
+    pages: 510,
   },
   {
     id: 4,
     title: "Book-4",
     author: "Author-4",
     genres: ["science fiction", "fantasy"],
+    pages: 299,
   },
   {
     id: 5,
@@ -34,6 +38,7 @@ const data = [
     hasMovieAdaptation: false,
     translations: false,
     reviewCount: 20,
+    pages: 601,
   },
 ];
 
@@ -42,8 +47,7 @@ function getBooks() {
 }
 const books = getBooks();
 
-const booksWithAuthorModified = books.map((book) => {
-  return book.author + "!";
-});
-
-console.log(booksWithAuthorModified);
+const longBooks = books.filter(
+  (book) => book.pages > 500 && book.hasMovieAdaptation
+);
+console.log(longBooks);
